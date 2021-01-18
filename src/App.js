@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import SideBar from './components/sidebar/sidebar.component';
+import Header from './components/header/header.component';
+import Realtors from './components/realtors/realtors.component';
+import SectionFeatures from './components/section-features/section-features.component';
+import StoryPictures from './components/story-pictures/story-pictures.component';
+import StoryContent from './components/story-content/story-content.component';
+import SectionHomes from './components/section-homes/section-homes.component';
+import SectionGallery from './components/section-gallery/section-gallery.component';
+import Footer from './components/footer/footer.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+import './App.scss';
+
+const App = () => (
+  <div className='container'>
+    <SideBar />
+    <Header />
+    <Realtors />
+    <SectionFeatures />
+    <StoryPictures />
+    <StoryContent />
+    <SectionHomes />
+    <SectionGallery />
+    <Footer />
+  </div>
+);
 
 export default App;
