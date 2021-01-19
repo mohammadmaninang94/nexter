@@ -8,9 +8,6 @@ import SectionHomes from './components/section-homes/section-homes.component';
 import SectionGallery from './components/section-gallery/section-gallery.component';
 import Footer from './components/footer/footer.component';
 
-
-import './App.scss';
-
 const App = () => (
   <div className='container'>
     <SideBar />
