@@ -1,5 +1,32 @@
 .story {
-    &__pictures{
-        grid-column: full-start / col-end 4;
+  &__pictures {
+    grid-column: full-start / col-end 4;
+    background-image: linear-gradient(
+        rgba(var(--color-primary-rgb), 0.5),
+        rgba(var(--color-primary-rgb), 0.5)
+      ),
+      url(../../img/back.jpg);
+      background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    // justify-items: center;
+  }
+
+  &__img {
+    &--1 {
+      width: 100%;
+      grid-row: 2/6;
+      grid-column: 2/6;
     }
+
+    &--2 {
+      width: 115%;
+      grid-row: 4/ 6;
+      grid-column: 4/ 7;
+      z-index: 20;
+    }
+  }
 }
