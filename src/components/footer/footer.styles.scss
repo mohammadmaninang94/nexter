@@ -1,3 +1,40 @@
 .footer {
   grid-column: full-start / full-end;
+  background-color: var(--color-secondary);
+  padding: 8rem;
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &__link {
+      &:link,
+      &:visited {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--color-white);
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 2rem 4rem;
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        background-color: rgba(var(--color-white-rgb), 0.05);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+    color: var(--color-grey-light-2);
+    margin: 6rem auto 0 auto;
+    width: 70%;
+  }
 }
