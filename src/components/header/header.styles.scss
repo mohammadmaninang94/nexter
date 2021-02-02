@@ -18,7 +18,10 @@
 
   // GRID
   display: grid;
-  grid-template-rows: 1fr repeat(3, min-content) 1fr min-content;
+  // grid-template-rows: 1fr repeat(3, min-content) 1fr min-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
   justify-content: center;
 
   &__logo {
@@ -42,6 +45,7 @@
     color: var(--color-white);
 
     justify-self: start;
+    align-self: start;
   }
 
   // &__seenon-box {
@@ -51,7 +55,7 @@
   &__seenon-text {
     font-size: 1.6rem;
     color: var(--color-grey-light-2);
-    align-self: end;
+    // align-self: end;
 
     // FLEXBOX
     // display: flex;
@@ -59,7 +63,7 @@
     // align-items: center;
     // gap: 1.5rem;
 
-     // GRID
+    // GRID
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-column-gap: 1.5rem;
@@ -91,6 +95,7 @@
   &__seenon-img {
     display: block;
     max-height: 2.5rem;
+    max-width: 100%;
     filter: brightness(70%);
     background-color: rgba(var(--color-grey-light-2), 0.5);
   }
