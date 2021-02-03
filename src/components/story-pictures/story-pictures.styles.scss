@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .story {
   &__pictures {
     grid-column: full-start / col-end 4;
@@ -6,13 +8,18 @@
         rgba(var(--color-primary-rgb), 0.5)
       ),
       url(../../img/back.jpg);
-      background-size: cover;
+    background-size: cover;
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
     // justify-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 6rem;
+      grid-column: 1 / -1;
+    }
   }
 
   &__img {
@@ -20,6 +27,11 @@
       width: 100%;
       grid-row: 2/6;
       grid-column: 2/6;
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 1/-1;
+        grid-column: 1 / 5;
+      }
     }
 
     &--2 {
@@ -27,6 +39,12 @@
       grid-row: 4/ 6;
       grid-column: 4/ 7;
       z-index: 20;
+
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        grid-row: 2/6;
+        grid-column: 4 / 7;
+      }
     }
   }
 }

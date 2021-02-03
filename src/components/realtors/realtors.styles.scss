@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .realtors {
   grid-column: col-start 7 / full-end;
   background-color: var(--color-secondary);
@@ -13,12 +15,20 @@
   align-content: center;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-row-gap: 5vh;
     grid-column-gap: 2rem;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium){
+      grid-template-columns: repeat(3, min-content 1fr);
+    }
   }
 
   &__img {
